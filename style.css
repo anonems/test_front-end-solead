@@ -1,0 +1,277 @@
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    
+}
+nav{
+    top: 0;
+    width: auto;
+    height: 100px;
+    right:10%;
+    left:10%;
+    background-color: white;
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:30px ;   
+    color:hsl(219, 9%, 45%);
+    box-shadow: 0px 0.5px 0px 0px hsl(219, 9%, 45%);
+
+}
+.nav_content{
+    background-color: transparent;
+    border: none;
+    color:hsl(219, 9%, 45%);
+    height: 95%;
+}
+.nav_content:hover{
+    color: black;
+    box-shadow: 0px 3px 0px 0px hsl(26, 100%, 55%);
+
+}
+
+.po_img{
+width: 400px;
+border-radius: 10px;
+
+
+}
+.jr_po_img{
+    width: 85px;
+    border-radius: 10px;
+    
+    
+}
+.jr_po_img:hover, .jr_po_img_active:hover{
+opacity: 0.5;}
+
+.jr_po_img_active {
+    width: 85px;
+    border-radius: 10px;
+    border-width: 10px;  
+    box-shadow: hsl(26, 100%, 55%) 0px 1px 4px, hsl(26, 100%, 55%) 0px 0px 0px 3px;
+
+}
+.nav_content_cart{
+    background-color: transparent;
+    border:none;
+    color:hsl(219, 9%, 45%);
+}
+.nav_content_cart:hover{
+    color:black;
+}
+.cart_content{
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+} 
+
+.dropbtn {
+    background-color: transparent;
+    color: hsl(219, 9%, 45%);
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: absolute;
+    display: inline-block;
+    right: 130px;
+
+  }
+
+  .cart_ct{
+  display: grid;
+  grid-template-areas:
+    'menu main  main'
+    'menu footer right'
+    'foot foot foot';
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 260px;
+    margin: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .dropdown-content span {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {color: hsl(0, 0%, 0%);}
+
+.avatar{
+    right: 0px;
+    position: absolute;
+    background-color: transparent;
+    border:none;
+    width: 50px;  
+}
+.avatar:hover{
+    border-radius: 25px;
+    box-shadow: hsl(26, 100%, 55%) 0px 1px 4px, hsl(26, 100%, 55%) 0px 0px 0px 3px;
+
+}
+.nb_article{
+    
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    gap:30px;
+    font-weight: bold;
+    background-color: hsl(223, 64%, 98%);
+    border-radius:10px;
+}
+.nb_article button{
+    background-color: transparent;
+    border:none;
+    color : hsl(26, 100%, 55%);
+}
+.nb_article button:hover{
+    opacity: 0.5;
+}
+.add_article{
+    
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    width: 250px;
+    height: 50px;
+    background-color: hsl(26, 100%, 55%);
+    border:none;
+    border-radius: 10px;
+    color:white;
+}
+.add_article:hover{
+    opacity: 0.7;
+    box-shadow: 10px 5px 5px hsl(26, 100%, 55%);
+}
+.reduc{
+    margin-left:115px;
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    left:0;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    background-color: hsl(25, 100%, 94%);
+    border-radius: 5px;
+    color: hsl(26, 100%, 55%);
+    font-weight: bold;
+}
+.old_price{
+    color:grey;
+    text-decoration: line-through;
+    grid-row: 2;
+    grid-column: 1;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 110%;
+    font-weight: bold;
+}
+.marque{
+    color: hsl(26, 100%, 55%);
+    font-weight: bold;
+    font-size: 80%;
+}
+.descript{
+    color:hsl(219, 9%, 45%);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.price{
+    grid-row: 1;
+    grid-column: 1;
+    font-size: 170%;
+    font-weight: bold;
+}
+h1{
+    font-size: 230%;
+}
+.sneakers{
+    width: 50%;
+    display: grid;
+    gap: 0px 20%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left:43%;
+    transform: translate(-50%, -50%);
+}
+#nb_art{
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    top:-7px;
+    right: 0px;
+    width: 20px;
+    font-size: 80%;
+    font-weight: bold;
+    background-color:hsl(26, 100%, 55%) ;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    border:none;
+  }
+  .modal .po_img{
+    width: 500px;
+    }
+  /* Modal Content */
+  .modal-content {
+    background-color: transparent;
+    margin: auto;
+    width: 30%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: relative;
+    top:0px;
+    left:340px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: hsl(26, 100%, 55%);
+    text-decoration: none;
+    cursor: pointer;
+  }
+

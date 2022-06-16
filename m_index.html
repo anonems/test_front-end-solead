@@ -1,0 +1,136 @@
+<script>
+window.onresize = () => {
+  if(screen.width >= 699) {
+  document.location = "index.html";
+ }
+}
+</script>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="m_style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+
+</head>
+<header>
+    <nav>
+      <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+            <div class="logo">
+                <img id="logo"src="images/logo.svg" alt="logo">
+                <div class="dropdown">
+                    <button class="dropbtn"  ><span class="material-symbols-outlined">shopping_cart</span><div id="nb_art"></div></button>
+                    <div class="dropdown-content">
+                      <span style="box-shadow: 0px 0.5px 0px 0px hsl(219, 9%, 45%); font-weight: bold; grid-template-columns: repeat(2, 1fr); ">cart</span>
+                      <span  >
+                        <div class="cart_ct">
+                          
+                        <img style="margin-top:25%;grid-area: menu; vertical-align: middle " width="50px" src="images/image-product-1-thumbnail.jpg" alt="article_img">
+                        <p style="grid-area: main; font-size: 80%; color: hsl(219, 9%, 45%);">Fall Limited Edition Sneakers</p>
+                        <p style="grid-area: footer; font-size: 80%;color: hsl(219, 9%, 45%);">$125.00 x <b id="numb" >0</b> = $<b id="fp">00</b>.00</p>
+                        <img style="margin-bottom:25%; grid-area: right;vertical-align: middle " width="auto" src="images/icon-delete.svg" alt="del_icon">
+                        <button style="grid-area: foot;" class="add_article">Checkout</button>
+                      </div>
+                      </span>
+                    </div>
+                  </div>
+                  <img  class="avatar"src="images/image-avatar.png" alt="cart-icon">
+            </div>
+
+          <div class="menu-items">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">contact</a></li>
+          </div>
+        </div>
+      </div>
+    
+    </nav>
+</header>
+<body>
+        <div id="poimg" style="width : 100%; background-size:cover;height:400px;background-repeat: no-repeat ; background-image: url('images/image-product-1.jpg');">
+            <button id="nbt" style="left:3%;top: 200px;position: absolute;background-color: transparent;border:none;color:white"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+            <button id="pbt" style="left:90%;top: 200px;position: absolute;background-color: transparent;border:none;color:white"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
+
+          </div>
+          
+          <div style="margin:20px">
+          <span class="marque">SNEAKER COMPANY</span>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p class="descript">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+          </p>
+
+          <div style="display:grid; align-items:center">
+          <span class="price">$125.00</span><span class="reduc">50%</span><br>
+          <span style="grid-column: 2;grid-row: 1;" class="old_price">$250.00</span><br>
+            </div>
+          <div class="nb_article" style="margin-bottom:20px">
+            <button id="moins" style="position:absolute; left:50px"><span class="material-symbols-outlined">remove</span></button>
+            <span id="nb">0</span>
+            <button id="plus" style="position:absolute; right:50px"><span class="material-symbols-outlined">add</span></button>
+          </div>
+          <button class="add_article" style="margin:0"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+        
+      </div>
+
+
+      
+      <script>
+                  //ajout article
+                  let nplus = document.getElementById("plus");
+                  let nmoins = document.getElementById("moins");
+                  let nb = document.getElementById("nb");
+                  let nb_art = document.getElementById("nb_art");
+                  let numb = document.getElementById("numb");
+                  let fp=document.getElementById("fp");
+                  nplus.addEventListener("click", () => {
+                  let plus = parseInt(nb.innerText)+1
+                  nb.innerText = plus
+                  nb_art.innerText = plus
+                  numb.innerText = plus
+                  fp.innerText = plus * 250
+                  })
+                  nmoins.addEventListener("click", () => {
+                  let moins = parseInt(nb.innerText)-1
+                  if(moins>=0){
+                  nb.innerText = moins
+                  nb_art.innerText = moins
+                  numb.innerText = moins
+                  fp.innerText = moins * 250
+                  }
+                  })
+                  let nbt = document.getElementById("nbt")
+                  let pbt = document.getElementById("pbt")
+                  let poimg = document.getElementById("poimg")
+                  let i = 1
+                  pbt.addEventListener("click",()=> {
+                    if(i<4){
+                    i = i+1
+                    poimg.style.backgroundImage = "url('images/image-product-"+i+".jpg')"
+                    }
+                  })
+                  nbt.addEventListener("click",()=> {
+                    if(i>1){
+                        i = i-1
+                        poimg.style.backgroundImage = "url('images/image-product-"+i+".jpg')"
+                    }
+                   
+                  })
+      </script>
+  
+</body>
+</html>
